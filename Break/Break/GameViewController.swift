@@ -46,7 +46,7 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
         
         playSound("KnightRider1")
         // MARK: - Background💩
-     
+        
         
         let bg = UIImageView(image: UIImage(named: "background"))
         bg.frame = view.frame
@@ -80,14 +80,14 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
                 
             } // i love you hun
             
-        }// chech brick count
+        }// check brick count
         playSound("BEEP")
         
         if brickBehavior.items.count == 0 {
-        
+            
             // you win
             endGame()
-        
+            
         }
         
     } // end 2 item contact
@@ -106,7 +106,7 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
             case .Floor :
                 
                 if let ball = item as? UIView {
-                
+                    
                     ballBehavior.removeItem(ball)
                     collision.removeItem(ball)
                     ball.removeFromSuperview()
@@ -115,10 +115,10 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
                 if topBar.lives == 0 {
                     
                     // game over
-                endGame()
+                    endGame()
                     
                 } else {
-                
+                    
                     topBar.lives--
                     
                     createBall()
@@ -133,15 +133,15 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
     } // MARK: - Touch Methods 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-//        if let touch = touches.first {
-//            
-//            let point = touch.locationInView(view)
-//            attachment?.anchorPoint.x = point.x
-//            
-//        }
-
+        if let touch = touches.first {
+            
+            let point = touch.locationInView(view)
+            attachment?.anchorPoint.x = point.x
+            
+        }
+        
         touchesMoved(touches, withEvent: event)
-
+        
         
     } // end touches began
     
@@ -158,11 +158,11 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
     
     func createBricks () {
         
-        let cols = 11
+        let cols = 5
         let rows = 3
         
         let brickH = 30
-        let brickSpacing = 5
+        let brickSpacing = 2
         
         let totalSpacing = (cols + 1) * brickSpacing
         let brickW = (Int(view.frame.width) - totalSpacing) / cols
@@ -184,7 +184,7 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
                 brickBehavior.addItem(brick)
                 
                 // wrap view in boundary
-                collision.translatesReferenceBoundsIntoBoundary = true
+                //                collision.translatesReferenceBoundsIntoBoundary = true
                 
             }
         }
@@ -210,7 +210,7 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
         animator.addBehavior(push)
         
         print(animator.behaviors.count)
-     }
+    }
     
     func createPaddle() {
         
@@ -272,18 +272,18 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
     }
     
     func endGame() {
-    
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let startVC =
         storyboard.instantiateViewControllerWithIdentifier("StartVC")
         
         navigationController?.viewControllers = [startVC]
-    
+        
     }
     
     func playSound(named: String) {
-    
+        
         if let fileData = NSDataAsset(name: named) {
             
             let data = fileData.data
@@ -303,7 +303,7 @@ class GameViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisi
             }
             
         }
-    
+        
     }
     
     //audio 

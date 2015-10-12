@@ -15,6 +15,14 @@ class StartViewController: UIViewController {
         let gameVC = GameViewController()
         
         navigationController?.viewControllers = [gameVC]
-         
+        
+//        let topScoreLable.text = "\(score)"
+//        
+//         topScoreLable = UILabel(frame: CGRectMake(0, 0, 100, 50))
+//        
+//        topScoreLable.text = "0"
+//       // topScoreLable.frame.origin.x = frame.width - 100
+//        topScoreLable.textColor = UIColor.cyanColor()
+//        topScoreLable.textAlignment = .Right
     }
 }

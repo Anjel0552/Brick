@@ -17,6 +17,7 @@
 		373DB4291BC6AF3F001A26B5 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DB4281BC6AF3F001A26B5 /* TopBarView.swift */; settings = {ASSET_TAGS = (); }; };
 		373DB42B1BC6B147001A26B5 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 373DB42A1BC6B147001A26B5 /* background.png */; settings = {ASSET_TAGS = (); }; };
 		37DC67801BC8232F00C7D9F2 /* KnightRider1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 37DC677F1BC8232F00C7D9F2 /* KnightRider1.mp3 */; settings = {ASSET_TAGS = (); }; };
+		37DC67821BCB6AAD00C7D9F2 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC67811BCB6AAD00C7D9F2 /* GameData.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		373DB4281BC6AF3F001A26B5 /* TopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		373DB42A1BC6B147001A26B5 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		37DC677F1BC8232F00C7D9F2 /* KnightRider1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = KnightRider1.mp3; sourceTree = "<group>"; };
+		37DC67811BCB6AAD00C7D9F2 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				373DB4221BC6AED9001A26B5 /* StartViewController.swift */,
 				373DB4261BC6AF07001A26B5 /* GameViewController.swift */,
 				373DB4281BC6AF3F001A26B5 /* TopBarView.swift */,
+				37DC67811BCB6AAD00C7D9F2 /* GameData.swift */,
 				373DB4241BC6AEE4001A26B5 /* ScoreViewController.swift */,
 			);
 			path = Break;
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373DB4291BC6AF3F001A26B5 /* TopBarView.swift in Sources */,
+				37DC67821BCB6AAD00C7D9F2 /* GameData.swift in Sources */,
 				373DB4271BC6AF07001A26B5 /* GameViewController.swift in Sources */,
 				373DB4251BC6AEE4001A26B5 /* ScoreViewController.swift in Sources */,
 				373DB4101BC6AD53001A26B5 /* AppDelegate.swift in Sources */,
