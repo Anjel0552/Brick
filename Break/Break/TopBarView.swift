@@ -45,7 +45,6 @@ class TopBarView: UIView {
         didSet {
             
             scoreLable.text = "\(score)"
-            
         }
     }
     
@@ -55,11 +54,11 @@ class TopBarView: UIView {
     
     override func didMoveToSuperview() {
         
-        titleLable.text = "BREAK"
+        titleLable.text = "JOSH"
         titleLable.textColor = UIColor.cyanColor()
         
         score = 0 
-        lives = 3
+        lives = 16
         
         scoreLable.text = "0"
         scoreLable.frame.origin.x = frame.width - 100
