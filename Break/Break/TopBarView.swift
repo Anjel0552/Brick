@@ -55,7 +55,7 @@ class TopBarView: UIView {
     override func didMoveToSuperview() {
         
         titleLable.text = "Break"
-        titleLable.textColor = UIColor.cyanColor()
+        titleLable.textColor = UIColor.whiteColor()
         
         score = 0 
         lives = 16
